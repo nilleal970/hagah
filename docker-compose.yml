@@ -1,0 +1,21 @@
+services:
+  illumina:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: illumina-app
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3001}:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - DB_PATH=/app/data/illumina.db
+    volumes:
+      # Volume persistente para o banco SQLite
+      - illumina-data:/app/data
+
+volumes:
+  illumina-data:
+    driver: local

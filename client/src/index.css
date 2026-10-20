@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  [data-theme='blue'] {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-light: #eff6ff;
+    --sidebar-bg: #0f2942;
+    --sidebar-active: #1e3a5f;
+    --sidebar-border: #152e4a;
+    --bg-app: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --card-border: #f1f5f9;
+  }
+
+  [data-theme='green'] {
+    --primary: #059669;
+    --primary-hover: #047857;
+    --primary-light: #ecfdf5;
+    --sidebar-bg: #064e3b;
+    --sidebar-active: #047857;
+    --sidebar-border: #065f46;
+    --bg-app: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --card-border: #f1f5f9;
+  }
+
+  [data-theme='purple'] {
+    --primary: #7c3aed;
+    --primary-hover: #6d28d9;
+    --primary-light: #f5f3ff;
+    --sidebar-bg: #2e1065;
+    --sidebar-active: #4c1d95;
+    --sidebar-border: #3b0764;
+    --bg-app: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --card-border: #f1f5f9;
+  }
+
+  [data-theme='dark'],
+  .dark {
+    --primary: #38bdf8;
+    --primary-hover: #0ea5e9;
+    --primary-light: #1e293b;
+    --sidebar-bg: #0b0f19;
+    --sidebar-active: #1e293b;
+    --sidebar-border: #1e293b;
+    --bg-app: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --card-border: #334155;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-app);
+    color: var(--text-main);
+  }
+  
+  .font-serif-bible {
+    font-family: 'Crimson Pro', Georgia, serif;
+  }
+}
+
+/* Utilitários semânticos reativos ao tema Hagah */
+.bg-theme-primary {
+  background-color: var(--primary) !important;
+}
+
+.text-theme-primary {
+  color: var(--primary) !important;
+}
+
+.border-theme-primary {
+  border-color: var(--primary) !important;
+}
+
+.bg-theme-sidebar {
+  background-color: var(--sidebar-bg) !important;
+}
+
+.bg-theme-sidebar-active {
+  background-color: var(--sidebar-active) !important;
+}
+
+.border-theme-sidebar {
+  border-color: var(--sidebar-border) !important;
+}
+
+.bg-theme-app {
+  background-color: var(--bg-app) !important;
+}
+
+.bg-theme-card {
+  background-color: var(--card-bg) !important;
+}
+
+.border-theme-card {
+  border-color: var(--card-border) !important;
+}

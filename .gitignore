@@ -1,0 +1,35 @@
+# Logs and environment
+.env
+.env.local
+.env.*.local
+*.log
+npm-debug.log*
+
+# Database & SQLite storage
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build and production output
+dist/
+build/
+out/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+Thumbs.db
